@@ -4,7 +4,7 @@ from models.Contact import Contact
 
 user1 = User("Alice")
 user2 = User("Bob")
-admin = Admin()
+admin = Admin(user1)
 
 
 user1.add_friend(user2)
