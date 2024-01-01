@@ -6,3 +6,6 @@ class Contact:
 
     def __repr__(self):
         return f"Contact({self.user.name}, {self.country_code}, {self.phone_number})"
+
+    def __str__(self):
+        return f"Contact({self.user.name}, {self.country_code}, {self.phone_number})"

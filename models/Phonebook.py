@@ -7,9 +7,9 @@ class Phonebook:
         self.contacts.append(contact)
 
     def remove_contact(self, contact):
-        if contact in self.contacts:
+        try:
             self.contacts.remove(contact)
-        else:
+        except ValueError:
             print("Contact does not exist")
 
     def filter_by_country(self, country_code):

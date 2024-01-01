@@ -10,7 +10,7 @@ admin = Admin(user1)
 user1.add_friend(user2)
 
 
-contact1 = Contact(user1, "+1", "555-1234")
+contact1 = Contact(user1, "+2", "555-1234")
 user1.add_phone_book("family")
 user1.add(contact1, "family")
 
@@ -20,6 +20,7 @@ admin.add_contact_to_phone_book(contact2, user1.phone_books["family"])
 
 
 user1.share(user2, "family")
+print(user1.phone_books["family"].filter_by_country("+1"))
 
 
-print(repr(user2.phone_books["family"].contacts))
+print(user2.phone_books["family"].contacts)
